@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.0 on win32)" generated="20200712 10:41:38.025" rpa="false">
+<suite id="s1" name="FindResturantTest" source="C:\Users\umadn\PycharmProjects\ResturantProject\testcases\FindResturantTest.robot">
+<test id="s1-t1" name="Search Resturant at your area">
+<kw name="website" library="findResturantKeyword">
+<arguments>
+<arg>${siteurl}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browsername}</arg>
+</arguments>
+<msg timestamp="20200712 10:41:38.197" level="INFO">Opening browser 'chrome' to base url 'https://www.just-eat.co.uk/'.</msg>
+<status status="PASS" starttime="20200712 10:41:38.197" endtime="20200712 10:41:46.304"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200712 10:41:46.304" endtime="20200712 10:41:50.522"></status>
+</kw>
+<status status="PASS" starttime="20200712 10:41:38.197" endtime="20200712 10:41:50.522"></status>
+</kw>
+<kw name="Enter Searchcode" library="findResturantKeyword">
+<arguments>
+<arg>${areacode}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_postcode}</arg>
+<arg>${postcode}</arg>
+</arguments>
+<msg timestamp="20200712 10:41:50.524" level="INFO">Typing text 'AR51 1aa' into text field 'name:postcode'.</msg>
+<status status="PASS" starttime="20200712 10:41:50.523" endtime="20200712 10:41:50.757"></status>
+</kw>
+<status status="PASS" starttime="20200712 10:41:50.523" endtime="20200712 10:41:50.757"></status>
+</kw>
+<kw name="Click Submit" library="findResturantKeyword">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Btn_submit}</arg>
+</arguments>
+<msg timestamp="20200712 10:41:50.757" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
+<status status="PASS" starttime="20200712 10:41:50.757" endtime="20200712 10:41:57.661"></status>
+</kw>
+<status status="PASS" starttime="20200712 10:41:50.757" endtime="20200712 10:41:57.661"></status>
+</kw>
+<kw name="Entering the cusine name" library="findResturantKeyword">
+<arguments>
+<arg>${NameCusine}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_Search_dish}</arg>
+<arg>${cusine_name}</arg>
+</arguments>
+<msg timestamp="20200712 10:41:57.665" level="INFO">Typing text 'italian' into text field 'id:dish-search'.</msg>
+<status status="PASS" starttime="20200712 10:41:57.665" endtime="20200712 10:41:57.913"></status>
+</kw>
+<status status="PASS" starttime="20200712 10:41:57.661" endtime="20200712 10:41:57.913"></status>
+</kw>
+<kw name="click Search" library="findResturantKeyword">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Btn_Search}</arg>
+</arguments>
+<msg timestamp="20200712 10:41:57.917" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
+<status status="PASS" starttime="20200712 10:41:57.917" endtime="20200712 10:42:00.470"></status>
+</kw>
+<status status="PASS" starttime="20200712 10:41:57.917" endtime="20200712 10:42:00.470"></status>
+</kw>
+<kw name="Getting Text from text" library="findResturantKeyword">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${count}</arg>
+</arguments>
+<assign>
+<var>${var}</var>
+</assign>
+<msg timestamp="20200712 10:42:00.506" level="INFO">${var} = 2 matching open restaurants for</msg>
+<status status="PASS" starttime="20200712 10:42:00.474" endtime="20200712 10:42:00.506"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${var}</arg>
+</arguments>
+<status status="PASS" starttime="20200712 10:42:00.506" endtime="20200712 10:42:00.506"></status>
+</kw>
+<status status="PASS" starttime="20200712 10:42:00.474" endtime="20200712 10:42:00.506"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20200712 10:42:02.509" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200712 10:42:00.506" endtime="20200712 10:42:02.509"></status>
+</kw>
+<kw name="Resturant in our area" library="findResturantKeyword">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<assign>
+<var>@{list}</var>
+</assign>
+<msg timestamp="20200712 10:42:02.509" level="INFO">@{list} = [ ]</msg>
+<status status="PASS" starttime="20200712 10:42:02.509" endtime="20200712 10:42:02.509"></status>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>${NameList}</arg>
+</arguments>
+<assign>
+<var>@{wholeList}</var>
+</assign>
+<msg timestamp="20200712 10:42:02.540" level="INFO">@{wholeList} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="54a3809375a9290c693c8d274ead2097", element="0.9495895866034965-2")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (session="54a3809375...</msg>
+<status status="PASS" starttime="20200712 10:42:02.509" endtime="20200712 10:42:02.540"></status>
+</kw>
+<kw name="${L} IN [ @{wholeList} ]" type="for">
+<kw name="${L} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;54a3809375a9290c693c8d274ead2097&quot;, element=&quot;0.9495895866034965-2&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${L}</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20200712 10:42:02.571" level="INFO">${text} = Demo - ASK Italian Premium</msg>
+<status status="PASS" starttime="20200712 10:42:02.540" endtime="20200712 10:42:02.587"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<status status="PASS" starttime="20200712 10:42:02.587" endtime="20200712 10:42:02.587"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${list}</arg>
+<arg>${text}</arg>
+</arguments>
+<status status="PASS" starttime="20200712 10:42:02.587" endtime="20200712 10:42:02.587"></status>
+</kw>
+<status status="PASS" starttime="20200712 10:42:02.540" endtime="20200712 10:42:02.587"></status>
+</kw>
+<kw name="${L} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;54a3809375a9290c693c8d274ead2097&quot;, element=&quot;0.9495895866034965-3&quot;)&gt;" type="foritem">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${L}</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20200712 10:42:02.618" level="INFO">${text} = Demo - ASK Italian Standard</msg>
+<status status="PASS" starttime="20200712 10:42:02.587" endtime="20200712 10:42:02.618"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<status status="PASS" starttime="20200712 10:42:02.618" endtime="20200712 10:42:02.618"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${list}</arg>
+<arg>${text}</arg>
+</arguments>
+<status status="PASS" starttime="20200712 10:42:02.618" endtime="20200712 10:42:02.618"></status>
+</kw>
+<status status="PASS" starttime="20200712 10:42:02.587" endtime="20200712 10:42:02.618"></status>
+</kw>
+<status status="PASS" starttime="20200712 10:42:02.540" endtime="20200712 10:42:02.618"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>-----------------------------</arg>
+</arguments>
+<status status="PASS" starttime="20200712 10:42:02.618" endtime="20200712 10:42:02.618"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Resturant in area AR51 1aa</arg>
+</arguments>
+<status status="PASS" starttime="20200712 10:42:02.618" endtime="20200712 10:42:02.618"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>-----------------------------</arg>
+</arguments>
+<status status="PASS" starttime="20200712 10:42:02.618" endtime="20200712 10:42:02.618"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${list}</arg>
+</arguments>
+<status status="PASS" starttime="20200712 10:42:02.618" endtime="20200712 10:42:02.634"></status>
+</kw>
+<status status="PASS" starttime="20200712 10:42:02.509" endtime="20200712 10:42:02.634"></status>
+</kw>
+<status status="PASS" starttime="20200712 10:41:38.197" endtime="20200712 10:42:02.634" critical="yes"></status>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200712 10:42:02.634" endtime="20200712 10:42:04.860"></status>
+</kw>
+<status status="PASS" starttime="20200712 10:41:38.025" endtime="20200712 10:42:04.860"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="FindResturantTest">FindResturantTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
