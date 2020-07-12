@@ -8,6 +8,13 @@ Technology Used : Python, RobotFramework
 
 Framework Used: Page Object Model
 
+Pre requisites
+
+Install Python 3 or older
+Install Robot framework
+Install Robot framework selenium library
+Install PyCharm IDE
+
 How to run RestaurantProject
 
 Download the zip or clone the Git repository.
